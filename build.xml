@@ -1,0 +1,41 @@
+<project name="leadapps" default="war" basedir=".">
+
+<path id="build.classpath">
+		<fileset dir="webroot.webinf\lib" include="*.jar \>
+			<include name="*.jar"/>
+      </fileset>
+</path>	
+	
+	<target name="compile">
+		<mkdir dir="${javac.dest}" />
+		<javac destdir="${javac.dest}" debug="true" srcdir="${java.source.dir}" />
+			<classpath refid="build.classpath" />
+		</javac>
+			
+	</target>
+	
+	<target name="jar" depends="compile">
+		<war destfile="${dist/lib/classes/}" webxml="WebRoot/WEB-INF/web.xml">
+			<fileset dir="WebRoot/WEB-INF"/>
+			<lib dir="WebRoot/WEB-INF/lib"/>
+			<classes dir="webRoot/WEB-INF"/>
+		</war>
+	</target>	
+	<target name="war" depends="jar">
+		<war destfile="${jar.dist}" webxml="WebRoot/WEB-INF/web.xml" />
+			<fileset dir="WebRoot"/>
+			<lib dir="WebRoott/WEB-INF/lib"/>
+			<classes dir="webRoot/WEB-INF"/>
+		</war>
+	</target>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</project>
