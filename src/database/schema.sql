@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS leadapp;
+DROP DATABASE IF EXISTS leadAppDB;
 
-CREATE DATABASE leadapp;
+CREATE DATABASE leadAppDB;
 
-USE leadapp;
+USE leadAppDB;
 
 # -----------------------------------------------------------------------
 # LEADUSER
